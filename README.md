@@ -34,7 +34,7 @@ Sigue estos pasos para clonar y levantar el proyecto en tu entorno local:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/TU_USUARIO/app_prediccion_riesgo_inocuidad.git](https://github.com/SantiagoSanchezVargas/app_prediccion_riesgo_inocuidad.git)
+   git clone [https://github.com/SantiagoSanchezVargas/app_prediccion_riesgo_inocuidad.git](https://github.com/SantiagoSanchezVargas/app_prediccion_riesgo_inocuidad.git)
    cd app_prediccion_riesgo_inocuidad
 2. **Crear y activar un entorno virtual:**
    ```bash
