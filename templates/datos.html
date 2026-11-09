@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2 class="mb-3 text-dark">Repositorio de Datos Multivariado (SIVIGILA & IDEAM)</h2>
+        <p class="text-muted">
+            Visualización de los registros históricos procesados conforme al protocolo metodológico, vinculando variables fisicoquímicas mensuales y el conteo institucional de brotes de ETA.
+        </p>
+        <div class="card shadow-sm border-0">
+            <div class="card-body table-responsive">
+                {{ tabla | safe }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

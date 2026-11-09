@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0 p-4">
+            <h2 class="text-center mb-3 text-success">Entrenamiento y Validación del Modelo</h2>
+            <p class="text-center text-muted mb-4">
+                Ejecución del algoritmo supervisado <strong>Random Forest Classifier</strong> aplicando la partición temporal metodológica (Entrenamiento: 2015-2021 / Prueba: 2022-2023).
+            </p>
+            
+            <form method="POST" class="text-center">
+                <button type="submit" class="btn btn-success btn-lg px-5">Entrenar y Evaluar Modelo</button>
+            </form>
+
+            {% if resultados %}
+            <hr class="my-4">
+            <h4 class="text-center mb-3">Métricas Oficiales de Rendimiento</h4>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-3 border bg-light rounded">
+                        <span class="d-block text-muted small">Sensibilidad (Recall)</span>
+                        <strong class="fs-4 text-primary">{{ resultados.sensibilidad }}%</strong>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3 border bg-light rounded">
+                        <span class="d-block text-muted small">Precisión</span>
+                        <strong class="fs-4 text-success">{{ resultados.precision }}%</strong>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3 border bg-light rounded">
+                        <span class="d-block text-muted small">Exactitud Global</span>
+                        <strong class="fs-4 text-dark">{{ resultados.exactitud }}%</strong>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

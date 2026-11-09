@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm border-0 p-4 h-100">
+            <h3 class="mb-3 text-dark">Simulador de Alerta Temprana</h3>
+            <p class="text-muted">Ingrese los valores promedio de las variables ambientales capturadas en nodos críticos de la cadena de suministro en Chía:</p>
+            
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="t_media" class="form-label">Temperatura Media (°C):</label>
+                    <input type="number" step="0.1" class="form-control" id="t_media" name="t_media" required placeholder="Ej: 19.5">
+                </div>
+                <div class="mb-3">
+                    <label for="hr_media" class="form-label">Humedad Relativa Media (% HR):</label>
+                    <input type="number" step="0.1" class="form-control" id="hr_media" name="hr_media" required placeholder="Ej: 84.0">
+                </div>
+                <div class="mb-3">
+                    <label for="mes" class="form-label">Mes del Año (1-12):</label>
+                    <input type="number" class="form-control" id="mes" name="mes" required placeholder="Ej: 8 (Agosto)">
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Evaluar Riesgo Microbiológico</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm border-0 p-4 h-100 d-flex flex-column justify-content-center">
+            <h3 class="mb-3 text-dark">Resultado de la Alerta</h3>
+            {% if alerta %}
+                <div class="alert {% if 'ROJA' in alerta.estado %}alert-danger{% else %}alert-success{% endif %}" role="alert">
+                    <h4 class="alert-heading fw-bold">{{ alerta.estado }}</h4>
+                    <p class="mb-0 mt-2"><strong>Acción Recomendada:</strong> {{ alerta.recomendacion }}</p>
+                </div>
+            {% else %}
+                <p class="text-muted text-center italic">Complete el formulario a la izquierda para generar la directriz operativa del sistema de alerta temprana bajo los lineamientos del proyecto[cite: 1].</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

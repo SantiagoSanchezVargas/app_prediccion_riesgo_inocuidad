@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+    <div class="container-fluid py-3">
+        <h1 class="display-5 fw-bold text-success">Modelo Predictivo de Riesgo Microbiológico</h1>
+        <p class="col-md-10 fs-5 text-secondary mt-3">
+            Aplicativo web desarrollado para anticipar y prevenir la contaminación microbiológica en la cadena de suministro agroindustrial de Cundinamarca (énfasis en Chía), integrando fuentes abiertas institucionales (SIVIGILA e IDEAM) mediante analítica de Big Data y modelos supervisados de Machine Learning.
+        </p>
+        <hr class="my-4">
+        <p>Registros históricos consolidados en el sistema analítico: <strong>{{ total_registros }} periodos mensuales (2015-2023)</strong>.</p>
+        <div class="d-flex gap-3 mt-4">
+            <a class="btn btn-success btn-lg" href="{{ url_for('ver_datos') }}" role="button">Ver Datos Integrados</a>
+            <a class="btn btn-outline-dark btn-lg" href="{{ url_for('modelo') }}" role="button">Ejecutar Modelo ML</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
