@@ -4,14 +4,14 @@ Prototipo de aplicación web desarrollado en **Flask** que integra un repositori
 
 ---
 
-## 🚀 Características Principales
+## Características Principales
 - **Repositorio Multivariado:** Integración histórica de 108 periodos mensuales (2015–2023) uniendo variables fisicoquímicas/hidroclimáticas (temperaturas y humedad relativa) con el conteo de brotes de enfermedades transmitidas por alimentos (ETA).
 - **Modelo Predictivo Optimizado:** Algoritmo *Random Forest* configurado con ponderación de clases (`class_weight='balanced'`) y un umbral de decisión probabilístico del 35% para priorizar la sensibilidad epidemiológica (62.50%).
 - **Módulo de Alerta Temprana:** Interfaz interactiva de simulación de riesgos en la cadena de frío bajo parámetros del *Codex Alimentarius*.
 
 ---
 
-## 📊 Métricas Oficiales de Rendimiento (Conjunto de Prueba 2022–2023)
+## Métricas Oficiales de Rendimiento (Conjunto de Prueba 2022–2023)
 Evaluado sobre una partición temporal estricta de 24 meses:
 - **Sensibilidad (Recall):** 62.50%
 - **Especificidad:** 50.00%
@@ -21,14 +21,14 @@ Evaluado sobre una partición temporal estricta de 24 meses:
 
 ---
 
-## 🛠️ Tecnologías y Librerías Utilizadas
+## Tecnologías y Librerías Utilizadas
 - **Backend:** Python, Flask
 - **Machine Learning & Análisis de Datos:** Scikit-Learn, Pandas, NumPy
 - **Visualización:** Matplotlib, Seaborn, Tailwind CSS (Frontend)
 
 ---
 
-## ⚙️ Instrucciones de Instalación y Ejecución Local
+## Instrucciones de Instalación y Ejecución Local
 
 Sigue estos pasos para clonar y levantar el proyecto en tu entorno local:
 
@@ -52,5 +52,5 @@ Sigue estos pasos para clonar y levantar el proyecto en tu entorno local:
 5. **Abrir en el navegador:**
    Entra a http://127.0.0.1:5000 para interactuar con la plataforma.
 
-## 👥 Autores
+## Autores
 Universidad de Cundinamarca - Sede Chía (2026)
